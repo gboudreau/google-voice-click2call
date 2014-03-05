@@ -36,6 +36,7 @@ def main():
 		print "Will login now... "
 		browser.open('https://accounts.google.com/ServiceLogin')
 		browser.select_form(nr=0)
+		browser.set_all_readonly(False)
 		browser['Email'] = GV_USERNAME
 		browser['Passwd'] = GV_PASSWORD
 		response = browser.submit()
